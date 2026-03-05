@@ -17,7 +17,7 @@ class SpecialOfferCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Special Offer',
+                'Ưu đãi đặc biệt',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -26,7 +26,7 @@ class SpecialOfferCard extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {},
-                child: const Text('See All'),
+                child: const Text('Xem tất cả'),
               ),
             ],
           ),
@@ -48,10 +48,10 @@ class SpecialOfferCard extends StatelessWidget {
                 return const Center(child: CircularProgressIndicator());
               }
               if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-                return const Center(child: Text('Không có ưu đãi nào.', style: TextStyle(color: Colors.black54)));
+                return const Center(child: Text('Không có ưu đãi nào', style: TextStyle(color: Colors.black54)));
               }
               if (snapshot.hasError) {
-                return const Center(child: Text('Lỗi tải dữ liệu.'));
+                return const Center(child: Text('Lỗi tải dữ liệu'));
               }
 
               // Lấy 1 document đầu tiên ra
@@ -156,8 +156,6 @@ class SpecialOfferCard extends StatelessWidget {
                               color: Colors.grey[600],
                             ),
                           ),
-                          const SizedBox(width: 4),
-                          Icon(Icons.verified, size: 14, color: Colors.blue[400]),
                           const SizedBox(width: 8),
                           const Icon(Icons.star, color: Colors.orange, size: 14),
                           const SizedBox(width: 2),

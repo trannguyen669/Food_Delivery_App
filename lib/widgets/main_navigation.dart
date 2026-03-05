@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../screens/home_screen.dart';
-import '../screens/order_screen.dart';
-import '../screens/profile_screen.dart';
+import '../screens/user/home_screen.dart';
+import '../screens/order/order_screen.dart';
+import '../screens/user/profile_screen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});
@@ -76,7 +76,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     required int index,
   }) {
     final isActive = _currentIndex == index;
-    final color = isActive ? const Color(0xFF3D8B87) : Colors.grey[600];
+    final color = isActive ? const Color(0xFFFF6B35) : Colors.grey[600];
 
     return InkWell(
       onTap: () {
@@ -88,7 +88,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
         decoration: BoxDecoration(
-          color: isActive ? const Color(0xFF3D8B87).withOpacity(0.1) : Colors.transparent,
+          color: isActive ? const Color(0xFFFF6B35).withOpacity(0.1) : Colors.transparent,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Column(
