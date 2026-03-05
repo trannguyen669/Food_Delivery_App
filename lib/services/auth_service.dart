@@ -39,7 +39,7 @@ class AuthService {
       );
 
       // 2. TẠO MỘT DOCUMENT CHO USER TRÊN FIRESTORE
-      //    (Đây là bước rất quan trọng trong kế hoạch Tuần 1)
+  
       await _firestore.collection("users").doc(userCredential.user!.uid).set(
         {
           'uid': userCredential.user!.uid,

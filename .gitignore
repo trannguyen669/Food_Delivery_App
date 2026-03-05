@@ -12,6 +12,10 @@
 .swiftpm/
 migrate_working_dir/
 
+# Environment variables
+.env
+.env.*
+
 # IntelliJ related
 *.iml
 *.ipr
@@ -43,3 +47,20 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Firebase sensitive files
+lib/firebase_options.dart
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# Android local config
+android/local.properties
+android/key.properties
+
+# Build files
+*.iml
+.gradle/
+android/.gradle/
+# Firebase sensitive files
+lib/firebase_options.dart
+android/app/google-services.json
